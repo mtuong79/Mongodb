@@ -1,6 +1,5 @@
 import streamlit as st
 import pymongo
-import ssl
 
 # Initialize connection.
 # Uses st.experimental_singleton to only run once.
