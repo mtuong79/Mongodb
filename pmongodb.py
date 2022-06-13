@@ -3,9 +3,10 @@ import pymongo
 
 # Initialize connection.
 # Uses st.experimental_singleton to only run once.
-# @st.experimental_singleton
+@st.experimental_singleton
 
-client = pymongo.MongoClient(**st.secrets["mongo"])
+uri = "mongodb+srv://mtuong:Wellcome2@oucru-it.bcq3ord.mongodb.net/?retryWrites=true&w=majority"
+client = pymongo.MongoClient(uri)
 
 try:
     st.write(client.server_info())
