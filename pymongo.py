@@ -3,7 +3,7 @@ import pymongo
 
 # Initialize connection.
 # Uses st.experimental_singleton to only run once.
-@st.experimental_singleton
+# @st.experimental_singleton
 
 client = pymongo.MongoClient(**st.secrets["mongo"])
 
